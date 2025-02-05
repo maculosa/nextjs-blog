@@ -18,7 +18,9 @@ export default function Layout({ children, home }) {
                 />
                 <meta
                     property="og:image"
-                    content={`https://vercel.com/api/www/avatar/04f3e834ac5e37334977a76e5d6ada416b89e6bc?s=160`}
+                    content={`https://og-image.vercel.app/${encodeURI(
+                        siteTitle,
+                    )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
                 />
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
@@ -39,7 +41,7 @@ export default function Layout({ children, home }) {
                 ) : (
                     <>
                         <Link href="/">
-                            <Image 
+                            <Image
                                 priority
                                 src="/images/profile.jpg"
                                 className={utilStyles.borderCircle}
